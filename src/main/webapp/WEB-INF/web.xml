@@ -1,0 +1,162 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app version="2.4"
+         xmlns="http://java.sun.com/xml/ns/j2ee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+    <display-name>Archetype Created Web Application</display-name>
+
+    <context-param>
+        <param-name>url</param-name>
+        <param-value>jdbc:mysql://localhost:3307/test</param-value>
+    </context-param>
+    
+    <servlet>
+        <servlet-name>HelloServlet</servlet-name>
+        <servlet-class>com.rensq.servlet.HelloServlet</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>ServletConfigDemo1</servlet-name>
+        <servlet-class>com.rensq.servlet.ServletConfigDemo1</servlet-class>
+        <!--配置ServletConfigDemo1的初始化参数 -->
+        <init-param>
+            <param-name>name</param-name>
+            <param-value>rensq</param-value>
+        </init-param>
+        <init-param>
+            <param-name>password</param-name>
+            <param-value>123456</param-value>
+        </init-param>
+        <init-param>
+            <param-name>charset</param-name>
+            <param-value>UTF-8</param-value>
+        </init-param>
+    </servlet>
+
+    <servlet>
+        <servlet-name>ServletContext1</servlet-name>
+        <servlet-class>com.rensq.servlet.ServletContext1</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>ServletContext2</servlet-name>
+        <servlet-class>com.rensq.servlet.ServletContext2</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>ResponseDemo1</servlet-name>
+        <servlet-class>com.rensq.servlet.ResponseDemo1</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>DrawImageServlet</servlet-name>
+        <servlet-class>com.rensq.servlet.DrawImageServlet</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>CheckCodeServlet</servlet-name>
+        <servlet-class>com.rensq.servlet.CheckCodeServlet</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>RequestDemo1</servlet-name>
+        <servlet-class>com.rensq.servlet.RequestDemo1</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>CookieDemo1</servlet-name>
+        <servlet-class>com.rensq.servlet.CookieDemo1</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>SessionDemo</servlet-name>
+        <servlet-class>com.rensq.servlet.SessionDemo</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>BookIndexServlet</servlet-name>
+        <servlet-class>com.rensq.servlet.BookIndexServlet</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>BookBuyServlet</servlet-name>
+        <servlet-class>com.rensq.servlet.BookBuyServlet</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>BookCarListServlet</servlet-name>
+        <servlet-class>com.rensq.servlet.BookCarListServlet</servlet-class>
+    </servlet>
+
+
+
+    
+    <servlet-mapping>
+        <servlet-name>HelloServlet</servlet-name>
+        <url-pattern>/servlet/hello</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>ServletConfigDemo1</servlet-name>
+        <url-pattern>/servlet/config</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>ServletContext1</servlet-name>
+        <url-pattern>/servlet/context1</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>ServletContext2</servlet-name>
+        <url-pattern>/servlet/context2</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>ResponseDemo1</servlet-name>
+        <url-pattern>/servlet/response1</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>DrawImageServlet</servlet-name>
+        <url-pattern>/servlet/drawimage</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>CheckCodeServlet</servlet-name>
+        <url-pattern>/servlet/check</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>RequestDemo1</servlet-name>
+        <url-pattern>/servlet/request1</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>CookieDemo1</servlet-name>
+        <url-pattern>/servlet/cookie1</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>SessionDemo</servlet-name>
+        <url-pattern>/servlet/session1</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>BookIndexServlet</servlet-name>
+        <url-pattern>/servlet/bookindex</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>BookBuyServlet</servlet-name>
+        <url-pattern>/servlet/bookbuy</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>BookCarListServlet</servlet-name>
+        <url-pattern>/servlet/bookcarlist</url-pattern>
+    </servlet-mapping>
+
+</web-app>
