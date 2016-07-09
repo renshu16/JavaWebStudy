@@ -14,6 +14,7 @@ import java.util.Set;
 
 /**
  * Created by toothbond on 16/7/7.
+ * 列出所有的书
  */
 public class BookIndexServlet extends HttpServlet {
 
@@ -26,7 +27,9 @@ public class BookIndexServlet extends HttpServlet {
         Set<Map.Entry<String, Book>> bookSet = BookDB.getAll().entrySet();
         for (Map.Entry<String, Book> entry : bookSet){
             Book book = entry.getValue();
-
+            String url = req.getContextPath() + "/servlet/bookbuy?id=" + book.getId();
+            url = resp.encodeURL(url);
+            out.println(book.getName() + "<a href='"+url+"'>购买</a><br/>");
         }
     }
 }
